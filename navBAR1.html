@@ -1,0 +1,248 @@
+<!DOCTYPE>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script type = "text/javascript">
+    $(document).ready(function(){
+      $('.e, nav').click(function(){
+        $('.e').toggleClass('active');
+        $('nav').fadeToggle();
+        $('nav').removeClass('nav-hide');
+
+      })
+      $(".sticker1").hover(function(){
+      $(this).css("background-color", "#D32F2F");
+      }, function(){
+      $(this).css("background-color", "#EF5350");
+    });
+    })
+
+    $(function(){
+        $('.navbar-toggle, nav').click(function(){
+            $('.navbar-toggle').toggleClass('navbar-on');
+            $('nav').fadeToggle();
+            $('nav').removeClass('nav-hide');
+        });
+    });
+  </script>
+<title>navBar</title>
+<style>
+body {
+  margin: 0px;
+  font-family: "Lato", sans-serif;
+  background-color: #f1f1f1;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 65px;
+  grid-template-columns: 5fr 1fr 1fr 1fr 80px;
+  background-color: #fff;
+  border: solid;
+  border-width: thin;
+  border-color: #f1f1f1;
+}
+.box{
+  color: #EF5350;
+  background-color: #fff;
+}
+.b:hover{
+    color: #fff;
+    background-color: #EF5350;
+}
+.c:hover{
+    color: #fff;
+    background-color: #EF5350;
+}
+.d:hover{
+    color: #fff;
+    background-color: #EF5350;
+}
+    .a {
+
+        border-right: solid;
+        border-width: .5px;
+        border-color: #f1f1f1;
+        padding-top: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-bottom:2px;
+        font-size: 250%;
+        text-align: left;
+    }
+    .b {
+        cursor: pointer;
+        padding-top: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        font-size:100%;
+        text-align: center;
+        border-right: solid;
+        border-width: .5px;
+        border-color: #f1f1f1;
+    }
+    .c {
+      cursor: pointer;
+      padding-top: 25px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-bottom:2px;
+      font-size:100%;
+      text-align: center;
+        border-right: solid;
+        border-width: .5px;
+        border-color: #f1f1f1;
+    }
+    .d {
+      cursor: pointer;
+      padding-top: 25px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-bottom:2px;
+      font-size:100%;
+        text-align: center;
+        border-right: solid;
+        border-width: .5px;
+        border-color: #f1f1f1;
+    }
+    .e {
+      cursor: pointer;
+        position: relative;
+        background: #EF5350;
+
+      }
+    .hamburger{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 40px;
+      height: 4px;
+      background: #fff;
+      transition: .5s;
+
+    }
+    .hamburger::after{
+      position: absolute;
+      top: 10px;
+      width: 40px;
+      height: 4px;
+      content: '';
+      background: #fff;
+        transition: .5s;
+
+    }
+    .hamburger::before{
+      position: absolute;
+      top: -10px;
+      width: 40px;
+      height: 4px;
+      content: '';
+      background: #fff;
+        transition: .5s;
+    }
+    .e.active .hamburger::before {
+      top: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.e.active .hamburger {
+  background: rgba(0,0,0,0);
+}
+
+
+
+.e.active .hamburger::after{
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.img{
+  position: relative;
+}
+.img.active {
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+h1{
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  color: #fff;
+  width: 44%;
+  font-size: 400%;
+}
+.sticker1{
+position: absolute;
+top: 70%;
+left: 80%;
+width: auto;
+height: auto;
+padding: 15px;
+content: '';
+background: #EF5350;
+transition: .5s;
+text-align: center;
+font-size: 125%;
+color: #fff;
+}
+nav {
+  position: fixed;
+  z-index: 10;
+  background-color: #EF5350;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+  color: white;
+}
+
+nav ul {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 0 !important;
+}
+.nav-hide { display: none; }
+
+nav ul li { list-style: none; }
+
+nav ul li a {
+  font-size: 35pt;
+  color: inherit;
+  font-weight: bolder;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="box a">THE FIT FATHER.</div>
+    <div class="box b">Free Resources</div>
+    <div class="box c">Sign Up</div>
+    <div class="box d">Login</div>
+    <div class="box e">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+  <nav class="nav-hide">
+ <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">Blog</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li>
+ </ul>
+ </nav>
+
+  <div class = "img">
+     <img src="key_daddy_month.jpg" style="width:100%">
+     <h1 class = "animated fadeInLeft">THE #1 HEALTH AND FITNESS DESTINATION FOR MEN.</h1>
+     <div class = "sticker1 animated fadeInRight" >Try it FREE for yourself</div>
+ </div>
+
+</body>
+</html>
